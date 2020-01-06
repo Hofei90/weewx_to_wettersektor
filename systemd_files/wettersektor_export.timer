@@ -1,0 +1,10 @@
+# Pfad zum speichern: /etc/systemd/system/wettersektor_export.timer
+[Unit]
+Description=Timer zum Aufruf der Wettersektor Export Service Unit
+
+[Timer]
+OnCalendar=OnCalendar=*:0/5
+Unit=wettersektor_export.service
+
+[Install]
+WantedBy=multi-user.target

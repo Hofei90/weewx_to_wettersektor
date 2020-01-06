@@ -1,0 +1,11 @@
+# Pfad zum speichern: /etc/systemd/system/wettersektor_export.service
+[Unit]
+Description=ServiceUnit zum starten des Wettersektor Export Skriptes
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/pi/wetter-daten-management/wettersektor_export.py
+
+[Install]
+WantedBy=multi-user.target

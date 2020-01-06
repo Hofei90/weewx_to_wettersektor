@@ -1,0 +1,23 @@
+# vorlage_wettersektor_export_cfg.toml umbennen in wettersektor_export_cfg.toml
+loglevel = 20  # (0=NOTSET 10=DEBUG 20=INFO 30=WARNING 40=ERROR  50=CRITICAL) Standard = 20
+
+[weewx]
+sleeptime = 60 # Zeitverzögerung wie lange Skript bis zur Ausführung wartet damit es nicht kolidiert mit Weewx
+db = "mysql"  #  "mysql" | "sqlite"
+
+    [weewx.mysql]
+    database = "<datenbankname>"
+    user = "<username>"
+    password = "<password>"
+    host= "localhost"
+
+    [weewx.sqlite]
+    database = ":memory:"  # Path to database file or :memory:
+
+
+[wettersektor]
+username = "WETTERSEKTORUSERNAME"
+pw = "pw_zu_finden_in_wettersektor_wswin_bereich"
+# (True | False) Bei false werden die Daten via url gesende, bei True Abgeholt
+datei = false
+pfad_wettersektor_ausgabe = "/PFAD/WOHIN/AUSGABE/FÜR/WETTERSEKTOR/"

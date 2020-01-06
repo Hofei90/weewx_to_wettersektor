@@ -14,7 +14,7 @@ from peewee import fn
 
 
 def config_laden():
-    configfile = os.path.join(SKRIPTPFAD, "wetterconfig.toml")
+    configfile = os.path.join(SKRIPTPFAD, "wettersektor_export_cfg.toml")
     with open(configfile) as file:
         return toml.loads(file.read())
 

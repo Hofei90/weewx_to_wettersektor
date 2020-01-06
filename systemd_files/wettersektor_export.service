@@ -5,7 +5,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/python3 /home/pi/wetter-daten-management/wettersektor_export.py
+ExecStart=/usr/bin/python3 /home/pi/weewx_to_wettersektor/wettersektor_export.py
 
 [Install]
 WantedBy=multi-user.target
